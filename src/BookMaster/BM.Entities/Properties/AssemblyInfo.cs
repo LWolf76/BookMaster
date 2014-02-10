@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BM.DTO")]
+[assembly: AssemblyTitle("BM.Entities")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BM.DTO")]
+[assembly: AssemblyProduct("BM.Entities")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("01ec88ab-b87c-46ba-8f26-fb6cdb91a1df")]
+[assembly: Guid("6e200c59-a373-4ddc-8631-52b67bae02d0")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B5606B5-8A51-40FA-9E67-892B94D2C8A8}</ProjectGuid>
+    <ProjectGuid>{43FA4FCB-71D6-41C7-A95D-D1C019BC76D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BM.DTO</RootNamespace>
-    <AssemblyName>BM.DTO</AssemblyName>
+    <RootNamespace>BM.Entities</RootNamespace>
+    <AssemblyName>BM.Entities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="BookChapter.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
