@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable< BM.Web.Models.Item>
+@{
     ViewBag.Title = "BookMaster";
 }
 @section featured {
@@ -8,9 +9,22 @@
                 <h1>@ViewBag.Title.</h1>
                 <h2>@ViewBag.Message</h2>
             </hgroup>
-            <p>
 
-            </p>
         </div>
+
+
     </section>
 }
+<div>
+    @foreach (var item in Model)
+    {
+        <div>
+            <h4>@item.Title</h4>
+            <div>Summary: @item.Summary</div>
+            <div>Authr: @item.Author</div>
+            <div>Pages: @item.Pages</div>
+            <div>@Html.ActionLink("Edit", "Edit", new {id=item.ItemId})</div>
+            <hr />
+        </div>
+    }
+</div>
