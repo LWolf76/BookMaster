@@ -1,4 +1,4 @@
-﻿@model IEnumerable< BM.Web.Models.Item>
+﻿@model IEnumerable<BM.Web.Models.Item>
 @{
     ViewBag.Title = "BookMaster";
 }
@@ -23,7 +23,7 @@
             <div>Summary: @item.Summary</div>
             <div>Authr: @item.Author</div>
             <div>Pages: @item.Pages</div>
-            <div>@Html.ActionLink("Edit", "Edit", new {id=item.ItemId})</div>
+            <div>@Html.ActionLink("Edit", "Edit", new { id = item.ItemId })</div>
             <hr />
         </div>
     }

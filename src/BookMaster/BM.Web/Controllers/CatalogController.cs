@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BM.Web.Models;
 
 namespace BM.Web.Controllers
 {
@@ -11,9 +12,15 @@ namespace BM.Web.Controllers
         //
         // GET: /Catalog/
 
+        BookMasterDb _db = new BookMasterDb();
+
         public ActionResult Index()
         {
-            return View();
+            var model = _db.Items.ToList();
+
+            ViewBag.Message = " When a Simple Search is Just not Enough!";
+
+            return View(model);
         }
 
     }
