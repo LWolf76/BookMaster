@@ -23,5 +23,11 @@ namespace BM.Web.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var model = (from i in _db.Items where i.ItemId == id select i).Single();
+            ViewBag.Message = "Edit Page";
+            return View(model);
+        }
     }
 }

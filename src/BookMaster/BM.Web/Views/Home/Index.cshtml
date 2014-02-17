@@ -16,6 +16,9 @@
     </section>
 }
 <div>
+Search: <input id="Text1" type="text" />
+</div>
+<div>
     @foreach (var item in Model)
     {
         <div>
@@ -23,7 +26,7 @@
             <div>Summary: @item.Summary</div>
             <div>Authr: @item.Author</div>
             <div>Pages: @item.Pages</div>
-            <div>@Html.ActionLink("Edit", "Edit", new { id = item.ItemId })</div>
+            <!--<div>@Html.ActionLink("Edit", "Edit", "Catalog", new { id = item.ItemId })</div>-->
             <hr />
         </div>
     }
