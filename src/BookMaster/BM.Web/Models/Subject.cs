@@ -9,7 +9,5 @@ namespace BM.Web.Models
     {
         public Int32 SubjectId { get; set; }
         public String Description { get; set; }
-
-        public virtual Item Item { get; set; }
     }
 }

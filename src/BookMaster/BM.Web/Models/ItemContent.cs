@@ -13,5 +13,6 @@ namespace BM.Web.Models
         public Int32 Subject { get; set; }
 
         public Int32 ItemId { get; set; }
+        public virtual Item Item { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace BM.Web.Models
         public String Summary { get; set; }
 
         public virtual ICollection<Subject> Subjects { get; set; }
-        public ICollection<ItemContent> ItemContents { get; set; }
+        public virtual ICollection<ItemContent> ItemContents { get; set; }
 
     }
 }

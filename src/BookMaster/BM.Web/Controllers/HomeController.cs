@@ -21,7 +21,6 @@ namespace BM.Web.Controllers
                 .Where(i => i.Title.Contains(searchTerm) || i.Author.Contains(searchTerm))
                         select i;
 
-
             ViewBag.Message = " When a Simple Search is Just not Enough!";
 
             return View(model);
