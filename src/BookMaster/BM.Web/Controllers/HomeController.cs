@@ -13,11 +13,14 @@ namespace BM.Web.Controllers
 
         BookMasterDb _db = new BookMasterDb();
 
-        public ActionResult Index(String searchTerm = null)
+        public ActionResult Index(String searchTerm = "")
         {
-            var model = _db.Items.ToList();
+            var items = _db.Items.ToList();
 
-            
+            var model = from i in items
+                .Where(i => i.Title.Contains(searchTerm) || i.Author.Contains(searchTerm))
+                        select i;
+
 
             ViewBag.Message = " When a Simple Search is Just not Enough!";
 
