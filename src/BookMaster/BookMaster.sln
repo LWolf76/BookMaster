@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BM.Web", "BM.Web\BM.Web.csproj", "{4964B240-0C44-4FFB-8E9A-15075FCBE34C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BM.Web.Tests", "BM.Web.Tests\BM.Web.Tests.csproj", "{1A69E5E7-0F50-4253-A3EB-7E83B32C77ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMaster", "BookMaster\BookMaster.csproj", "{0A535E8B-858D-48F8-9AE5-20FF3EAC261A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4964B240-0C44-4FFB-8E9A-15075FCBE34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4964B240-0C44-4FFB-8E9A-15075FCBE34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4964B240-0C44-4FFB-8E9A-15075FCBE34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4964B240-0C44-4FFB-8E9A-15075FCBE34C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A69E5E7-0F50-4253-A3EB-7E83B32C77ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A69E5E7-0F50-4253-A3EB-7E83B32C77ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A69E5E7-0F50-4253-A3EB-7E83B32C77ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A69E5E7-0F50-4253-A3EB-7E83B32C77ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A535E8B-858D-48F8-9AE5-20FF3EAC261A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A535E8B-858D-48F8-9AE5-20FF3EAC261A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A535E8B-858D-48F8-9AE5-20FF3EAC261A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A535E8B-858D-48F8-9AE5-20FF3EAC261A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
