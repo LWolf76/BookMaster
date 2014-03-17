@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookMaster.Models
 {
@@ -9,7 +8,10 @@ namespace BookMaster.Models
     {
         public Int32 ItemId { get; set; }
         public Int32 Type { get; set; }
+
+        [Required(ErrorMessage = "Title Required")]
         public String Title { get; set; }
+
         public String Author { get; set; }
         public String PersonalAuthor { get; set; }
         public String ISBN { get; set; }
