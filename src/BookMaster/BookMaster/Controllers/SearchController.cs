@@ -91,15 +91,22 @@ namespace BookMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ItemId,Type,Title,Author,PersonalAuthor,ISBN,Publisher,Published,Edition,PublicationInformation,Pages,Location,Summary")] Item item)
+        public ActionResult Create([Bind(Include = "ItemId,ItemType,Title,Author,PersonalAuthor,ISBN,Publisher,Published,Edition,PublicationInformation,Pages,Location,Summary")] Item item)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Items.Add(item);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Items.Add(item);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
-
+            catch (DataException /* dex */)
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+            }
             return View(item);
         }
 
@@ -123,7 +130,7 @@ namespace BookMaster.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,Type,Title,Author,PersonalAuthor,ISBN,Publisher,Published,Edition,PublicationInformation,Pages,Location,Summary")] Item item)
+        public ActionResult Edit([Bind(Include = "ItemId,ItemType,Title,Author,PersonalAuthor,ISBN,Publisher,Published,Edition,PublicationInformation,Pages,Location,Summary")] Item item)
         {
             if (ModelState.IsValid)
             {

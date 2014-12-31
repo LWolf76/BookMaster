@@ -11,11 +11,11 @@
 	<hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Type)
+            @Html.DisplayNameFor(model => model.ItemType)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Type)
+            @Html.DisplayFor(model => model.ItemType)
         </dd>
 
         <dt>
@@ -104,6 +104,26 @@
 
         <dd>
             @Html.DisplayFor(model => model.Summary)
+        </dd>
+        
+        <dt>
+            @Html.DisplayFor(model => model.Subjects)
+        </dt>
+        
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Descriptions</th>
+                </tr>
+                @foreach (var item in Model.Subjects)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                    </tr>
+                }
+            </table>    
         </dd>
 
     </dl>

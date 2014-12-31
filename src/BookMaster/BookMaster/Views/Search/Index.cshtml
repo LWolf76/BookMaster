@@ -22,7 +22,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.First().Type)
+            @Html.DisplayNameFor(model => model.First().ItemType)
         </th>
         <th>
             @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter=ViewBag.CurrentFilter})
@@ -64,7 +64,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Type)
+                @Html.DisplayFor(modelItem => item.ItemType)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
