@@ -4,10 +4,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BookMaster.Models
 {
+    public enum ItemType
+    {
+        Book,
+        DVD,
+        CD
+    }
+
     public class Item
     {
         public Int32 ItemId { get; set; }
-        public Int32 Type { get; set; }
+        public ItemType? ItemType { get; set; }
 
         [Required(ErrorMessage = "Title Required")]
         public String Title { get; set; }
