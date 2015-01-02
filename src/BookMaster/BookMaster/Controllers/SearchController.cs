@@ -49,17 +49,17 @@ namespace BookMaster.Controllers
                     items = items.OrderByDescending(i => i.Title);
                     break;
                 case "Author":
-                    items = items.OrderBy(i => i.Location);
+                    items = items.OrderBy(i => i.Author);
                     break;
                 case "Author_desc":
-                    items = items.OrderByDescending(i => i.Location);
+                    items = items.OrderByDescending(i => i.Author);
                     break;
                 default:
                     items = items.OrderBy(i => i.Title);
                     break;
             }
 
-            int pageSize = 3;
+            int pageSize = 15;
             int pageNumber = (page ?? 1);
 
             return View(items.ToPagedList(pageNumber, pageSize));

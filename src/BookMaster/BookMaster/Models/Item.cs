@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace BookMaster.Models
@@ -35,6 +36,5 @@ namespace BookMaster.Models
         [Display(Name = "Subjects")]
         public virtual ICollection<Subject> Subjects { get; set; }
         public virtual ICollection<ItemContent> ItemContents { get; set; }
-
     }
 }
