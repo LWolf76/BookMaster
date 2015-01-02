@@ -1,13 +1,13 @@
 ﻿@model PagedList.IPagedList<BookMaster.Models.Item>
 @using BookMaster.Models
 @using PagedList.Mvc;
-<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css"/>
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Catalog Search";
 }
 
-<h2>Items</h2>
+<h2>Catalog</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -19,93 +19,61 @@
         <input type="submit" value="Search" />
     </p>
 }
-<div class="table">
-    <div class="row">
-        <div class="col-md-1">
+<table class="table table-striped table-hover">
+    <tr class="row">
+        <th class="col-md-1">
             @Html.DisplayNameFor(model => model.First().ItemType)
-        </div>
-        <div class="col-md-1">
+        </th>
+        <th class="col-md-4">
             @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
-        </div>
-        <div class="col-md-1">
+        </th>
+        <th class="col-md-2">
             @Html.ActionLink("Author", "Index", new { sortOrder = ViewBag.AuthorSortParm, currentFilter = ViewBag.CurrentFilter })
-        </div>
-        <div class="col-md-1">
-            @Html.DisplayNameFor(model => model.First().ISBN)
-        </div>
-        <div class="col-md-1">
-            @Html.DisplayNameFor(model => model.First().Publisher)
-        </div>
-        <div class="col-md-1">
+        </th>
+        <th class="col-md-1">
             @Html.DisplayNameFor(model => model.First().Published)
-        </div>
-        <div class="col-md-1">
-            @Html.DisplayNameFor(model => model.First().Edition)
-        </div>
-        <div class="col-md-1">
-            @Html.DisplayNameFor(model => model.First().PublicationInformation)
-        </div>
-        <div class="col-md-1">
+        </th>
+        <th class="col-md-1">
             @Html.DisplayNameFor(model => model.First().Pages)
-        </div>
-        <div class="col-md-1">
-            @Html.DisplayNameFor(model => model.First().Location)
-        </div>
-        <div class="col-md-1">
+        </th>
+        <th class="col-md-1">
             @Html.DisplayNameFor(model => model.First().Summary)
-        </div>
-    </div>
+        </th>
+        <th class="col-md-2">
+
+        </th>
+    </tr>
 
     @foreach (var item in Model)
     {
-        <div class="row table-striped">
-            <div class="col-md-1">
+        <tr class="row">
+            <td class="col-md-1">
                 @Html.DisplayFor(modelItem => item.ItemType)
-            </div>
-            <div class="col-md-1">
+            </td>
+            <td class="col-md-4">
                 @Html.DisplayFor(modelItem => item.Title)
-            </div>
-            <div class="col-md-1">
-                <div class="col-md-6">
-                    @Html.DisplayFor(modelItem => item.Author)
-                </div>
-                <div class="col-md-6">
-                    @Html.DisplayFor(modelItem => item.PersonalAuthor)
-                </div>
-            </div>
-            <div class="col-md-1">
-                @Html.DisplayFor(modelItem => item.ISBN)
-            </div>
-            <div class="col-md-1">
-                @Html.DisplayFor(modelItem => item.Publisher)
-            </div>
-            <div class="col-md-1">
+            </td>
+            <td class="col-md-2">
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td class="col-md-1">
                 @Html.DisplayFor(modelItem => item.Published)
-            </div>
-            <div class="col-md-1">
-                @Html.DisplayFor(modelItem => item.Edition)
-            </div>
-            <div class="col-md-1">
-                @Html.DisplayFor(modelItem => item.PublicationInformation)
-            </div>
-            <div class="col-md-1">
+            </td>
+            <td class="col-md-1">
                 @Html.DisplayFor(modelItem => item.Pages)
-            </div>
-            <div class="col-md-1">
-                @Html.DisplayFor(modelItem => item.Location)
-            </div>
-            <div class="col-md-1">
+            </td>
+            <td class="col-md-1">
                 @Html.DisplayFor(modelItem => item.Summary)
-            </div>
-            <div class="col-md-1">
+            </td>
+            <td class="col-md-2">
                 @Html.ActionLink("Edit", "Edit", new { id = item.ItemId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })
-            </div>
-        </div>
+            </td>
+        </tr>
     }
 
-</div>
+</table>
 <br />
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
