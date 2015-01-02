@@ -19,7 +19,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ItemType, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ItemType)
+                @Html.EnumDropDownListFor(model => model.ItemType, "Select Type")
                 @Html.ValidationMessageFor(model => model.ItemType)
             </div>
         </div>
@@ -37,14 +37,6 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Author)
                 @Html.ValidationMessageFor(model => model.Author)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PersonalAuthor, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PersonalAuthor)
-                @Html.ValidationMessageFor(model => model.PersonalAuthor)
             </div>
         </div>
 

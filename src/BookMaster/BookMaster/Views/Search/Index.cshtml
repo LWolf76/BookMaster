@@ -28,12 +28,7 @@
             @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
         </div>
         <div class="col-md-1">
-            <div class="col-md-6">
-                @Html.ActionLink("Author", "Index", new { sortOrder = ViewBag.AuthorSortParm, currentFilter = ViewBag.CurrentFilter })
-            </div>
-            <div class="col-md-6">
-                @Html.DisplayNameFor(model => model.First().PersonalAuthor)
-            </div>
+            @Html.ActionLink("Author", "Index", new { sortOrder = ViewBag.AuthorSortParm, currentFilter = ViewBag.CurrentFilter })
         </div>
         <div class="col-md-1">
             @Html.DisplayNameFor(model => model.First().ISBN)
