@@ -15,6 +15,7 @@ namespace BookMaster.DAL
         }
 
         public DbSet<Item> Items { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
