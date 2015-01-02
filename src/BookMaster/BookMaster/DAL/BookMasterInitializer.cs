@@ -9,7 +9,7 @@ using BookMaster.Models;
 
 namespace BookMaster.DAL
 {
-    public class BookMasterInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<BookMasterContext>
+    public class BookMasterInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<BookMasterContext> //DropCreateDatabaseAlways<BookMasterContext>
     {
         protected override void Seed(BookMasterContext context)
         {
@@ -27,7 +27,8 @@ namespace BookMaster.DAL
                     Subjects = new Collection<Subject>
                     {
                         new Subject { Description = "Book" },
-                        new Subject { Description = "DVD"}
+                        new Subject { Description = "DVD"},
+                        new Subject { Description = "Description3"}
                     }
                 },
                 new Item

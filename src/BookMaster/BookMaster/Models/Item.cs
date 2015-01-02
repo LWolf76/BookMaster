@@ -29,8 +29,8 @@ namespace BookMaster.Models
         public Int32 Pages { get; set; }
         public String Location { get; set; }
         public String Summary { get; set; }
-
-
+        
+        [Display(Name = "Subjects")]
         public virtual ICollection<Subject> Subjects { get; set; }
         public virtual ICollection<ItemContent> ItemContents { get; set; }
 
